@@ -1,0 +1,7 @@
+import common_gitlab_fastfile(file: 'path/to/a/fastfile', version: 'develop', repository: 'someGitlabGroup/subgroup/repository')
+
+desc "Testing imported lane"
+lane :test do
+  # Run any lane you have defined in the file imported using import common_gitlab_fastfile(...), Let's assume you file has imported_lane()
+  imported_lane()
+end
